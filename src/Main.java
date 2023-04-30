@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        EachSecondProgram eachSecondProgram = new EachSecondProgram();
+        //EachSecondProgram.timeFromStartProgram();
+        new FizzBuzz(15).programStart();
     }
 }
