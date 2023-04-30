@@ -1,10 +1,10 @@
 import java.util.concurrent.*;
 
 public class EachSecondProgram {
-        private static void eachSecondProgram(boolean isFiveSecCounter) {
+        private static void eachSecondProgram(boolean bool) {
             int count = 0;
             while (true){
-                if (isFiveSecCounter) {
+                if (bool) {
                     if (count % 5 == 0 && count != 0) {
                         System.out.println(count + " sec, " + "5 sec минуло");
                     }
@@ -24,7 +24,6 @@ public class EachSecondProgram {
 
         public static void timeFromStartProgram() {
             ExecutorService executor = Executors.newFixedThreadPool(2);
-
             executor.execute(() -> eachSecondProgram(true));
             executor.execute(() -> eachSecondProgram( false));
         }
